@@ -221,7 +221,7 @@ if ( ! $driver->query( "CREATE DATABASE `{$db}`" ) ) {
 }
 
 if ( is_dir( $wp_plugin_path . '/.git/hooks' ) && ! file_exists( $wp_plugin_path . '/.git/hooks/pre-commit' ) ) {
-	echo "Would you also like to install the pre-commit hook ( Default: Y ) ? (Y/n): ";
+	echo "Would you also like to install the phpunit pre-commit hook ( Default: Y ) ? (Y/n): ";
 
 	$option = trim( fgets( $handle ) );
 	$option = $option ? $option : 'Y';
