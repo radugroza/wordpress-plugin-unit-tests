@@ -73,6 +73,10 @@ if ( ! is_dir( $wp_plugin_tests ) && ! @mkdir( $wp_plugin_tests, 0777 ) ) {
 	exit( 'Fatal: could not create tests folder: ' . $wp_plugin_tests . ' Make sure the permissions are set correctly' );
 }
 
+if ( ! is_dir( $wp_plugin_tests . '/util' ) && ! mkdir( $wp_plugin_tests . '/util', 0777 ) ) {
+	exit( 'FATAL: could not create util folder' );
+}
+
 /**
  * install wordpress testing suite for a plugin
  */
@@ -164,6 +168,8 @@ if ( ! is_file( $wp_tests_dir . '/wp-tests-config.php' ) ) {
 $bootstrap = '<?php
 
 $_tests_dir = \'' . $wp_tests_dir . '\';
+define( \'TESTS_DIR\', dirname( __FILE__ ) );
+require_once TESTS_DIR . \'/util/helpers.php\';
 
 require_once $_tests_dir . \'/includes/functions.php\';
 
@@ -179,6 +185,19 @@ tests_add_filter( \'muplugins_loaded\', \'_manually_load_plugin\' );
 require $_tests_dir . \'/includes/bootstrap.php\';
 ';
 file_put_contents( $wp_plugin_tests . '/bootstrap.php', $bootstrap );
+
+/**
+ * helpers file
+ */
+if ( ! file_exists( $wp_plugin_tests . '/util/helpers.php' ) ) {
+	file_put_contents( $wp_plugin_tests . '/util/helpers.php', '<?php
+/**
+ * Helper file for tests
+ * should include general functions needed for various tests
+ */
+ 
+ ' );
+}
 
 /* create phpunit.xml.dist file */
 $phpunit = '<phpunit
