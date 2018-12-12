@@ -2,7 +2,7 @@
 
 
 function check_requirements() {
-	//1. test for svn command
+	//1. test for composer command
 	exec( 'composer --version', $out );
 	if ( empty( $out ) ) {
 		exit( 'FATAL: composer command not found. Install Composer: https://getcomposer.org' );
@@ -22,9 +22,9 @@ function download( $url, $path ) {
 	$size = 0;
 	while ( ! feof( $in ) ) {
 		$buffer = fgets( $in, 8096 );
-		$size += fwrite( $out, $buffer );
-		if ( $size % 100 == 0 ) {
-			echo "\r" . sprintf( '%.2f', $size / 1024 / 1024 ) . "MB";
+		$size  += fwrite( $out, $buffer );
+		if ( 0 === $size % 100 ) {
+			echo "\r" . sprintf( '%.2f', $size / 1024 / 1024 ) . 'MB';
 		}
 	}
 	fclose( $in );
@@ -81,7 +81,7 @@ $tmp_dir = rtrim( $tmp_dir, '\\/' );
 
 echo "downloading wordpress standards ... \n";
 
-download( 'https://github.com/ThriveThemes/WordPress-Coding-Standards/archive/develop.zip', $tmp_dir . '/develop.zip' );
+download( 'https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/archive/develop.zip', $tmp_dir . '/develop.zip' );
 @exec( 'rm -rf ' . $tmp_dir . '/WordPress-Coding-Standards 2>&1' );
 @exec( 'rd /s /q "' . $tmp_dir . '/WordPress-Coding-Standards" 2>&1' );
 @exec( 'rd /s /q "' . $tmp_dir . '/WordPress-Coding-Standards" 2>&1' );
