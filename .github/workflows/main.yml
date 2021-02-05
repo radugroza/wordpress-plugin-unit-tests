@@ -31,15 +31,13 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           extensions: mbstring, dom, fileinfo, mysqli
           ini-values: pdo_mysql.default_socket=/var/lib/mysql/mysql.sock,mysqli.default_socket=/var/lib/mysql/mysql.sock
+          tools: phpunit
 
       - name: Check PHP Version
         run: php -v
-
-      - name: Composer install
-        run: composer install --optimize-autoloader --prefer-dist
 
       - name: Install WP Tests
         run: bash bin/install-wp-tests.sh wp_tests root root 0.0.0.0 latest
 
       - name: phpunit tests
-        run: ./vendor/bin/phpunit
+        run: phpunit

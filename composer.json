@@ -1,7 +1,0 @@
-{
-    "name": "radu/wordpress-plugin-unit-tests",
-    "type": "project",
-    "require-dev": {
-        "phpunit/phpunit": "^7"
-    }
-}
