@@ -39,7 +39,7 @@ jobs:
         run: composer install --optimize-autoloader --prefer-dist
 
       - name: Install WP Tests
-        run: bash bin/install-wp-tests.sh wp_tests root root localhost latest
+        run: bash bin/install-wp-tests.sh wp_tests root root 0.0.0.0 latest
 
       - name: phpunit tests
         run: ./vendor/bin/phpunit
