@@ -30,6 +30,7 @@ jobs:
         with:
           php-version: ${{ matrix.php-versions }}
           extensions: mbstring, dom, fileinfo, mysqli
+          ini-values: pdo_mysql.default_socket=/var/lib/mysql/mysql.sock,mysqli.default_socket=/var/lib/mysql/mysql.sock
 
       - name: Check PHP Version
         run: php -v
