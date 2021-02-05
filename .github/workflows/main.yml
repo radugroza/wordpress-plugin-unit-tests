@@ -5,6 +5,15 @@ on: [push]
 jobs:
   run:
     runs-on: ${{ matrix.operating-system }}
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: false
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: wp_tests
+        ports:
+          - 3306/tcp
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
@@ -12,16 +21,13 @@ jobs:
     name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v1
+        uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
         with:
           php-version: ${{ matrix.php-versions }}
-          extension-csv: mbstring, intl #optional, setup extensions
-          ini-values-csv: post_max_size=256M, short_open_tag=On #optional, setup php.ini configuration
-          coverage: xdebug #optional, setup coverage driver
-          pecl: false #optional, setup PECL
+          extensions: mbstring, dom, fileinfo, mysql
 
       - name: Check PHP Version
         run: php -v
@@ -30,7 +36,7 @@ jobs:
         run: composer install --optimize-autoloader --prefer-dist
 
       - name: Install WP Tests
-        run: bash bin/install-wp-tests.sh wordpress_test root root localhost latest
+        run: bash bin/install-wp-tests.sh wp_tests root root localhost latest
 
       - name: phpunit tests
         run: ./vendor/bin/phpunit
