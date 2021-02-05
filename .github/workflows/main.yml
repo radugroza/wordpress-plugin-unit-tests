@@ -13,7 +13,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: wp_tests
         ports:
-          - 3306
+          - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     strategy:
@@ -39,7 +39,7 @@ jobs:
         run: composer install --optimize-autoloader --prefer-dist
 
       - name: Install WP Tests
-        run: bash bin/install-wp-tests.sh wp_tests root root 127.0.0.1 latest
+        run: bash bin/install-wp-tests.sh wp_tests root root localhost latest
 
       - name: phpunit tests
         run: ./vendor/bin/phpunit
