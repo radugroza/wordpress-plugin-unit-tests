@@ -2,9 +2,8 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
   pull_request:
@@ -14,9 +13,9 @@ on:
   workflow_dispatch: true
 
 jobs:
-  run:    
+  run:
     runs-on: ${{ matrix.operating-system }}
-    strategy:      
+    strategy:
       matrix:
         operating-system: [ubuntu-latest]
         php-versions: ['7.2', '7.3']
@@ -39,9 +38,9 @@ jobs:
 
     - name: Composer install
       run: composer install --optimize-autoloader --prefer-dist
-    
+
     - name: Install WP Tests
       run: bash bin/install-wp-tests.sh wordpress_test root root localhost latest
-      
+
     - name: phpunit tests
       run: ./vendor/bin/phpunit
