@@ -1,25 +1,14 @@
 name: CI
 
-on: [push]
+on: [ push ]
 
 jobs:
   run:
     runs-on: ${{ matrix.operating-system }}
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: false
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: wp_tests
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     strategy:
       matrix:
-        operating-system: [ubuntu-latest]
-        php-versions: ['5.3', '7.2']
+        operating-system: [ ubuntu-latest ]
+        php-versions: [ '7.2' ]
     name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
     steps:
       - name: Checkout
@@ -36,8 +25,17 @@ jobs:
       - name: Check PHP Version
         run: php -v
 
-      - name: Install WP Tests
-        run: bash bin/install-wp-tests.sh wp_tests root root 0.0.0.0 latest
-
       - name: phpunit tests
-        run: phpunit
+        run: phpunit > phpunit.output.txt
+
+      - name: read results
+        id: results
+        run: echo "::set-output name=phpunit::$(cat phpunit.output.txt)"
+
+      - name: send phpunit test results
+        uses: distributhor/workflow-webhook@v1
+        env:
+          webhook_type: 'form-urlencoded'
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
+          data: "phpunit_test_results=${{ steps.results.outputs.phpunit }}"
