@@ -30,7 +30,12 @@ jobs:
 
       - name: read results
         id: results
-        run: echo "::set-output name=phpunit::$(cat phpunit.output.txt)"
+        run: |
+          result=$(cat phpunit.output.txt)
+          result="${result//'%'/'%25'}"
+          result="${result//$'\n'/'%0A'}"
+          result="${result//$'\r'/'%0D'}"
+          echo "::set-output name=phpunit::$result"
 
       - name: show results
         run: echo ${{ steps.results.outputs.phpunit }}
