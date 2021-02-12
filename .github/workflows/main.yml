@@ -32,6 +32,9 @@ jobs:
         id: results
         run: echo "::set-output name=phpunit::$(cat phpunit.output.txt)"
 
+      - name: show results
+        run: echo ${{ steps.results.outputs.phpunit }}
+
       - name: send phpunit test results
         uses: distributhor/workflow-webhook@v1
         env:
