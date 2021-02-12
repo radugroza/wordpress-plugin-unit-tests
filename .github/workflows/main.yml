@@ -37,9 +37,6 @@ jobs:
           result="${result//$'\r'/'%0D'}"
           echo "::set-output name=phpunit::$result"
 
-      - name: show results
-        run: echo ${{ steps.results.outputs.phpunit }}
-
       - name: send phpunit test results
         uses: distributhor/workflow-webhook@v1
         env:
