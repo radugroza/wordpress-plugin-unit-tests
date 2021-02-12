@@ -38,4 +38,4 @@ jobs:
           webhook_type: 'form-urlencoded'
           webhook_url: ${{ secrets.WEBHOOK_URL }}
           webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
-          data: "phpunit_test_results=${{ steps.results.outputs.phpunit }}"
+          data: 'phpunit_test_results=${{ steps.results.outputs.phpunit }}'
