@@ -29,6 +29,7 @@ jobs:
         run: phpunit > phpunit.output.txt
 
       - name: read results
+        if: ${{ always() }}
         id: results
         run: |
           result=$(cat phpunit.output.txt)
@@ -38,6 +39,7 @@ jobs:
           echo "::set-output name=phpunit::$result"
 
       - name: send phpunit test results
+        if: ${{ always() }}
         uses: distributhor/workflow-webhook@v1
         env:
           webhook_type: 'form-urlencoded'
