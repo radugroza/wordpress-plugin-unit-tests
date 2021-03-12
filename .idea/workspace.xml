@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0baafba8-ebe6-4e3a-a8ae-ea4bc9e75638" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$USER_HOME$/.composer/vendor/phpunit" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1o3JyCWq8WP604Hrp073aqP6ltU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0baafba8-ebe6-4e3a-a8ae-ea4bc9e75638" name="Default Changelist" comment="" />
+      <created>1612509592865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612509592865</updated>
+      <workItem from="1612509593926" duration="9242000" />
+      <workItem from="1613111558457" duration="2427000" />
+      <workItem from="1615528530787" duration="421000" />
+    </task>
+    <task id="LOCAL-00001" summary="plugin unit tests">
+      <created>1612512120405</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612512120405</updated>
+    </task>
+    <task id="LOCAL-00002" summary="plugin unit tests">
+      <created>1612512667386</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612512667386</updated>
+    </task>
+    <task id="LOCAL-00003" summary="plugin unit tests">
+      <created>1612512710099</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612512710099</updated>
+    </task>
+    <task id="LOCAL-00004" summary="external phpunit">
+      <created>1612516700279</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612516700279</updated>
+    </task>
+    <task id="LOCAL-00005" summary="phpunit version">
+      <created>1612517016684</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612517016684</updated>
+    </task>
+    <task id="LOCAL-00006" summary="php 5.3">
+      <created>1612517112927</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612517112927</updated>
+    </task>
+    <task id="LOCAL-00007" summary="hook send results">
+      <created>1613112403862</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613112403862</updated>
+    </task>
+    <task id="LOCAL-00008" summary="hook send results">
+      <created>1613112510472</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613112510472</updated>
+    </task>
+    <task id="LOCAL-00009" summary="hook send results">
+      <created>1613112628286</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613112628286</updated>
+    </task>
+    <task id="LOCAL-00010" summary="hook send results">
+      <created>1613112787895</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613112787895</updated>
+    </task>
+    <task id="LOCAL-00011" summary="hook send results">
+      <created>1613113101052</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613113101052</updated>
+    </task>
+    <task id="LOCAL-00012" summary="hook send results">
+      <created>1613113176357</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613113176357</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test hook errs">
+      <created>1615528799002</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1615528799002</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="plugin unit tests" />
+    <MESSAGE value="external phpunit" />
+    <MESSAGE value="phpunit version" />
+    <MESSAGE value="php 5.3" />
+    <MESSAGE value="hook send results" />
+    <MESSAGE value="test hook errs" />
+    <option name="LAST_COMMIT_MESSAGE" value="test hook errs" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="514" y="144" key="#PHP" timestamp="1613111641712">
+      <screen x="0" y="25" width="1680" height="944" />
+    </state>
+    <state x="514" y="144" key="#PHP/0.25.1680.944/-855.-1667.3008.1667@0.25.1680.944" timestamp="1613111641712" />
+    <state x="345" y="184" key="CommitChangelistDialog2" timestamp="1615528798854">
+      <screen x="0" y="25" width="1680" height="944" />
+    </state>
+    <state x="345" y="184" key="CommitChangelistDialog2/-1920.-436.1920.1055/0.25.1680.944@0.25.1680.944" timestamp="1615528798854" />
+    <state x="424" y="167" key="CommitChangelistDialog2/0.25.1680.934/-855.-1667.3008.1667@0.25.1680.934" timestamp="1612517112809" />
+    <state x="-96" y="-1414" key="CommitChangelistDialog2/0.25.1680.935/-855.-1667.3008.1667@-855.-1667.3008.1667" timestamp="1612512120219" />
+    <state x="424" y="167" key="CommitChangelistDialog2/0.25.1680.935/-855.-1667.3008.1667@0.25.1680.935" timestamp="1612512709979" />
+    <state x="345" y="184" key="CommitChangelistDialog2/0.25.1680.944/-855.-1667.3008.1667@0.25.1680.944" timestamp="1613113176218" />
+    <state x="660" y="419" key="NewPhpFileDialog" timestamp="1612509681268">
+      <screen x="0" y="25" width="1680" height="934" />
+    </state>
+    <state x="660" y="419" key="NewPhpFileDialog/0.25.1680.934/-855.-1667.3008.1667@0.25.1680.934" timestamp="1612509681268" />
+    <state x="671" y="423" key="Vcs.Push.Dialog.v2" timestamp="1615528800473">
+      <screen x="0" y="25" width="1680" height="944" />
+    </state>
+    <state x="671" y="423" key="Vcs.Push.Dialog.v2/-1920.-436.1920.1055/0.25.1680.944@0.25.1680.944" timestamp="1615528800473" />
+    <state x="671" y="419" key="Vcs.Push.Dialog.v2/0.25.1680.934/-855.-1667.3008.1667@0.25.1680.934" timestamp="1612517114078" />
+    <state x="347" y="-965" key="Vcs.Push.Dialog.v2/0.25.1680.935/-855.-1667.3008.1667@-855.-1667.3008.1667" timestamp="1612512122372" />
+    <state x="671" y="419" key="Vcs.Push.Dialog.v2/0.25.1680.935/-855.-1667.3008.1667@0.25.1680.935" timestamp="1612512711776" />
+    <state x="671" y="423" key="Vcs.Push.Dialog.v2/0.25.1680.944/-855.-1667.3008.1667@0.25.1680.944" timestamp="1613113177469" />
+    <state x="641" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612512658346">
+      <screen x="0" y="25" width="1680" height="935" />
+    </state>
+    <state x="641" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1680.935/-855.-1667.3008.1667@0.25.1680.935" timestamp="1612512658346" />
+  </component>
+</project>
